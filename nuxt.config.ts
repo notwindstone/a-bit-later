@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   "compatibilityDate": "2025-07-15",
   "devtools"         : { "enabled": true },
 
+  "srcDir" : "./src",
   "modules": [
     "@nuxt/eslint",
     "@nuxt/image",
@@ -11,7 +12,7 @@ export default defineNuxtConfig({
     "@nuxt/fonts",
     "@unocss/nuxt",
     "@pinia/nuxt",
-    "@hebilicious/vue-query-nuxt",
+    "@peterbud/nuxt-query",
   ],
   "fonts": {
     // What font weights, styles and subsets to load for each font
