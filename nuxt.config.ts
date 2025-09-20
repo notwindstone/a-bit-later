@@ -30,13 +30,13 @@ export default defineNuxtConfig({
     },
 
     /*
-     * Load Geist font
-     * https://vercel.com/font
+     * Load Montserrat as the main font for the entire site
      */
     "families": [
       {
-        "name"    : "Geist",
+        "name"    : "Montserrat",
         "provider": "google",
+        "weights" : [400, 500, 600, 700],
       },
     ],
   },

@@ -1,0 +1,91 @@
+<script setup lang="ts">
+import VerticalDivider from '~/components/icons/VerticalDivider.vue'
+import ShortDivider from '~/components/icons/ShortDivider.vue'
+import Lightning from '~/components/icons/Lightning.vue'
+import Search from '~/components/icons/Search.vue'
+</script>
+
+<template>
+  <div class="h-[100px] px-5 py-6 bg-[#0c0c0c] border-b border-[#c8c7ca]/5 flex justify-center items-center">
+    <div class="container flex justify-between items-center">
+      <!-- Левая часть -->
+      <div class="flex justify-start items-center gap-6 lg:gap-[25px]">
+        <!-- Логотип -->
+        <a href="/" class="flex justify-start items-center gap-[15px]">
+          <h1 class="text-white font-semibold">
+            Anisign
+          </h1>
+        </a>
+        
+        <!-- Разделитель -->
+        <VerticalDivider />
+        
+        <!-- Навигация -->
+        <div class="hidden lg:flex justify-start items-center gap-10">
+          <div class="text-center justify-center text-[#aeaeae] text-sm font-semibold leading-tight hover:text-white transition-colors cursor-pointer">
+            Список аниме
+          </div>
+          <div class="text-center justify-center text-[#aeaeae] text-sm font-semibold leading-tight hover:text-white transition-colors cursor-pointer">
+            Персонажи
+          </div>
+          <div class="text-center justify-center text-[#aeaeae] text-sm font-semibold leading-tight hover:text-white transition-colors cursor-pointer">
+            Новости
+          </div>
+        </div>
+        
+        <!-- Второй разделитель -->
+        <div class="hidden lg:block">
+          <ShortDivider />
+        </div>
+        
+        <!-- Подписка -->
+        <div class="hidden md:flex justify-center items-center gap-[5px] cursor-pointer group">
+          <Lightning />
+          <div class="justify-start text-[#b3de51] text-sm font-medium  group-hover:text-[#9ac444] transition-colors">
+            Подписка
+          </div>
+        </div>
+      </div>
+      
+      <!-- Правая часть -->
+      <div class="flex justify-start items-center gap-5">
+        <!-- Поиск -->
+        <button class="hidden sm:flex w-full sm:w-[251px] h-[50px] p-[15px] rounded-xl outline outline-1 outline-offset-[-1px] outline-[#d9d9d9]/5 justify-between items-center">
+          <div class="flex justify-start items-center gap-2.5">
+            <Search />
+            <ShortDivider />
+            <div class="justify-start text-[#c8c7ca] text-sm font-medium ">
+              Поиск...
+            </div>
+          </div>
+          <div class="p-1 bg-[#c8c7ca] rounded shadow-[0px_2px_0px_0px_rgba(123,123,123,1.00)] flex justify-center items-center gap-2.5">
+            <div class="justify-start text-[#0c0c0c] text-[10px] font-medium ">
+              CTRL+K
+            </div>
+          </div>
+        </button>
+        
+        <div class="flex justify-start items-center gap-[15px]">
+          <!-- Разделитель -->
+          <div class="hidden sm:block">
+            <VerticalDivider />
+          </div>
+          
+          <!-- Кнопки входа -->
+          <div class="flex gap-2">
+            <div class="px-3 sm:px-5 py-3.5 bg-[#c8c7ca]/0 rounded-xl flex justify-center items-center gap-2.5 overflow-hidden cursor-pointer hover:bg-[#c8c7ca]/10 transition-colors">
+              <div class="text-center justify-center text-[#c8c7ca] text-sm font-semibold  leading-tight">
+                Войти
+              </div>
+            </div>
+            <div class="h-[50px] px-3 sm:px-5 py-3.5 bg-[#c8c7ca] rounded-xl flex justify-center items-center gap-2.5 overflow-hidden cursor-pointer hover:bg-[#b3b3b3] transition-colors">
+              <div class="text-center justify-center text-[#060606] text-sm font-semibold  leading-tight">
+                Регистрация
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
