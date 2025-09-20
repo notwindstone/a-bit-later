@@ -11,4 +11,5 @@ import "./globals.css";
   <LayoutReport />
   <LayoutHeader />
   <GeneralHero />
+  <GeneralFeaturedSection />
 </template>
