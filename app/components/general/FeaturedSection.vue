@@ -1,17 +1,18 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div
-    class="container  flex h-[336px] flex-col gap-6 md:grid md:grid-cols-12 md:gap-6"
-  >
-    <a href="#"
-      class="relative flex flex-col justify-between rounded-xl overflow-hidden min-h-[20rem] group md:col-span-6"
-    >
+  <div class="container flex flex-col gap-6 md:grid md:grid-cols-12 md:gap-6">
+      <a href="#"
+        class="relative flex flex-col justify-between rounded-xl overflow-hidden min-h-[18rem] sm:min-h-[20rem] lg:min-h-[22rem] group md:col-span-6"
+      >
       <div class="absolute inset-0">
-        <img
+        <NuxtImg
           src="https://helios-i.mashable.com/imagery/articles/00yoIviDSDi3aVSBSfwPzie/hero-image.fill.size_1248x702.v1752525551.jpg"
           alt="Изображение"
           class="w-full h-full object-cover object-center scale-105 transition-transform duration-700 group-hover:scale-110"
+          format="webp"
+          quality="70"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 60vw, 50vw"
           loading="lazy"
         />
         <div
@@ -69,13 +70,16 @@
     </a>
 
     <a href="#"
-      class="relative flex flex-col justify-between rounded-xl min-h-[20rem] overflow-hidden group md:col-span-4"
+      class="relative flex flex-col justify-between rounded-xl min-h-[18rem] sm:min-h-[20rem] lg:min-h-[22rem] overflow-hidden group md:col-span-4"
     >
       <div class="absolute inset-0">
-        <img
+        <NuxtImg
           src="https://www.kino-teatr.ru/video/44669/start.jpg"
           alt="Изображение"
           class="w-full h-full object-cover object-center scale-105 transition-transform duration-700 group-hover:scale-110"
+          format="webp"
+          quality="70"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 35vw, 33vw"
           loading="lazy"
         />
         <div
@@ -99,8 +103,8 @@
           <div class="flex items-center gap-1">
             <button
               type="button"
-              class="h-7 w-7 flex items-center justify-center rounded-md outline outline-1 outline-[#c8c7ca]/10 bg-[#c8c7ca]/5 text-[#c8c7ca] transition-colors hover:bg-[#c8c7ca]/10"
-              aria-label="Prev"
+              class="h-7 w-7 flex items-center justify-center rounded-md outline outline-1 outline-[#c8c7ca]/10 bg-[#c8c7ca]/5 text-[#c8c7ca] transition-colors hover:bg-[#c8c7ca]/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#fde5b9]/40"
+              aria-label="Предыдущий"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -125,8 +129,8 @@
             </button>
             <button
               type="button"
-              class="h-7 w-7 flex items-center justify-center rounded-md outline outline-1 outline-[#c8c7ca]/10 bg-[#c8c7ca] text-[#0c0c0c] font-medium transition-colors hover:bg-white/20"
-              aria-label="Next"
+              class="h-7 w-7 flex items-center justify-center rounded-md outline outline-1 outline-[#c8c7ca]/10 bg-[#c8c7ca] text-[#0c0c0c] font-medium transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#fde5b9]/40"
+              aria-label="Следующий"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -188,13 +192,16 @@
     </a>
 
     <a href="#"
-      class="relative flex flex-col justify-end rounded-xl text-black min-h-[20rem] overflow-hidden group md:col-span-2"
+      class="relative flex flex-col justify-end rounded-xl text-black min-h-[18rem] sm:min-h-[20rem] lg:min-h-[22rem] overflow-hidden group md:col-span-2"
     >
       <div class="absolute inset-0">
-        <img
-          src="/lib.png"
+        <NuxtImg
+          src="https://i.ibb.co/C3f4XnWV/lib.png"
           alt="Изображение"
           class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
+          format="webp"
+          quality="70"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 20vw, 17vw"
           loading="lazy"
         />
       </div>
