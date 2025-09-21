@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import Info from '~/components/icons/Info.vue'
-  import AnimeCard from './AnimeCard.vue'
+  import AnimeCard from './CalendarCard.vue'
 </script>
 
 <template>
@@ -36,31 +36,31 @@
   <!-- Сетка карточек аниме -->
   <div class="container mx-auto py-8">
     <div class="flex justify-between ">
-      <AnimeCard 
+      <GeneralCalendarCard 
         title="Гатиакута"
         date="19.09"
         time="23:00"
         :episode="190"
       />
-      <AnimeCard 
+      <GeneralCalendarCard 
         title="Магическая битва"
         date="20.09"
         time="22:30"
         :episode="25"
       />
-      <AnimeCard 
+      <GeneralCalendarCard 
         title="Атака титанов"
         date="21.09"
         time="23:30"
         :episode="75"
       />
-      <AnimeCard 
+      <GeneralCalendarCard 
         title="Наруто"
         date="22.09"
         time="21:00"
         :episode="720"
       />
-      <AnimeCard 
+      <GeneralCalendarCard 
         title="Наруто"
         date="22.09"
         time="21:00"

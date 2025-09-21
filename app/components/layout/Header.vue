@@ -25,9 +25,9 @@ import Search from '~/components/icons/Search.vue'
           <div class="text-center justify-center text-[#aeaeae] text-sm font-semibold leading-tight hover:text-white transition-colors cursor-pointer">
             Список аниме
           </div>
-          <div class="text-center justify-center text-[#aeaeae] text-sm font-semibold leading-tight hover:text-white transition-colors cursor-pointer">
+          <a href="/characters" class="text-center justify-center text-[#aeaeae] text-sm font-semibold leading-tight hover:text-white transition-colors cursor-pointer">
             Персонажи
-          </div>
+          </a>
           <div class="text-center justify-center text-[#aeaeae] text-sm font-semibold leading-tight hover:text-white transition-colors cursor-pointer">
             Новости
           </div>
