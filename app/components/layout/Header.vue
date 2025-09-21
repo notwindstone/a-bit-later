@@ -1,8 +1,39 @@
 <script setup lang="ts">
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 import VerticalDivider from '~/components/icons/VerticalDivider.vue'
 import ShortDivider from '~/components/icons/ShortDivider.vue'
 import Lightning from '~/components/icons/Lightning.vue'
 import Search from '~/components/icons/Search.vue'
+// Lazy import modal component to avoid SSR issues until needed
+const showSearch = ref(false)
+import SearchModal from '../general/SearchModal.vue'
+
+function openSearch() {
+  showSearch.value = true
+}
+function closeSearch() {
+  showSearch.value = false
+}
+function toggleSearch() {
+  showSearch.value = !showSearch.value
+}
+
+function onKey(e: KeyboardEvent) {
+  // CTRL+K (or CMD+K) opens search
+  if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+    e.preventDefault()
+    openSearch()
+  } else if (e.key === 'Escape' && showSearch.value) {
+    closeSearch()
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('keydown', onKey)
+})
+onBeforeUnmount(() => {
+  window.removeEventListener('keydown', onKey)
+})
 </script>
 
 <template>
@@ -50,7 +81,7 @@ import Search from '~/components/icons/Search.vue'
       <!-- Правая часть -->
       <div class="flex justify-start items-center gap-5">
         <!-- Поиск -->
-        <button class="hidden sm:flex w-full sm:w-[251px] h-[50px] p-[15px] rounded-xl outline outline-1 outline-offset-[-1px] outline-[#d9d9d9]/5 justify-between items-center">
+        <button @click="openSearch" class="hidden sm:flex w-full sm:w-[251px] h-[50px] p-[15px] rounded-xl outline outline-1 outline-offset-[-1px] outline-[#d9d9d9]/5 justify-between items-center">
           <div class="flex justify-start items-center gap-2.5">
             <Search />
             <ShortDivider />
@@ -64,6 +95,9 @@ import Search from '~/components/icons/Search.vue'
             </div>
           </div>
         </button>
+
+  <!-- Modal mount -->
+  <SearchModal v-if="showSearch" @close="closeSearch" />
         
         <div class="flex justify-start items-center gap-[15px]">
           <!-- Разделитель -->
