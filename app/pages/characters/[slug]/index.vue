@@ -19,7 +19,7 @@ const character = {
 <template>
   <LayoutReport />
   <LayoutHeader />
-  <div class="container py-10 flex flex-col gap-10">
+  <div class="container py-10  flex flex-col gap-10">
     <div class="flex flex-col md:flex-row gap-8">
       <div class="max-w-[375px] shrink-0">
         <div class="relative rounded-xl overflow-hidden">
