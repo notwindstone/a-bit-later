@@ -53,15 +53,15 @@ onBeforeUnmount(() => {
         
         <!-- Навигация -->
         <div class="hidden lg:flex justify-start items-center gap-10">
-          <div class="text-center justify-center text-[#aeaeae] text-sm font-semibold leading-tight hover:text-white transition-colors cursor-pointer">
+          <NuxtLink class="text-center justify-center text-[#aeaeae] text-sm font-semibold leading-tight hover:text-white transition-colors cursor-pointer">
             Список аниме
-          </div>
-          <a href="/characters" class="text-center justify-center text-[#aeaeae] text-sm font-semibold leading-tight hover:text-white transition-colors cursor-pointer">
+          </NuxtLink>
+          <NuxtLink href="/characters" class="text-center justify-center text-[#aeaeae] text-sm font-semibold leading-tight hover:text-white transition-colors cursor-pointer">
             Персонажи
-          </a>
-          <div class="text-center justify-center text-[#aeaeae] text-sm font-semibold leading-tight hover:text-white transition-colors cursor-pointer">
+          </NuxtLink>
+          <NuxtLink href="/news" class="text-center justify-center text-[#aeaeae] text-sm font-semibold leading-tight hover:text-white transition-colors cursor-pointer">
             Новости
-          </div>
+          </NuxtLink>
         </div>
         
         <!-- Второй разделитель -->
