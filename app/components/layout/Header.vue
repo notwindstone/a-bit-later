@@ -53,7 +53,7 @@ onBeforeUnmount(() => {
         
         <!-- Навигация -->
         <div class="hidden lg:flex justify-start items-center gap-10">
-          <NuxtLink class="text-center justify-center text-[#aeaeae] text-sm font-semibold leading-tight hover:text-white transition-colors cursor-pointer">
+          <NuxtLink href="/anime" class="text-center justify-center text-[#aeaeae] text-sm font-semibold leading-tight hover:text-white transition-colors cursor-pointer">
             Список аниме
           </NuxtLink>
           <NuxtLink href="/characters" class="text-center justify-center text-[#aeaeae] text-sm font-semibold leading-tight hover:text-white transition-colors cursor-pointer">
